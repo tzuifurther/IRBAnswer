@@ -3,7 +3,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		<title>學術倫理過不了嗎?</title>
+		<title>IRM/REC過不了嗎?</title>
 		<style>
 			body
 			{
@@ -21,10 +21,15 @@
 		
 			var datas;
 			var data_json = [];
+			if (site.GH_ENV == 'gh_pages') {
+				repo_url = site.repository_nwo;
+			} else {
+				repo_url = 'jimting/AREEAnswer';
+			answer_url = "https://raw.githubusercontent.com/"+repo_url+"/master/answer.json";
 			function init()
 			{	
 				//拿取資料
-				$.get("https://raw.githubusercontent.com/jimting/AREEAnswer/master/answer.json", function(data, status)
+				$.get(answer_url, function(data, status)
 				{
 					datas = JSON.parse(data);
 					$( "#result" ).text("拿取題庫完成，請輸入關鍵字查詢題庫。");
