@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -68,7 +69,7 @@
 		</script>
 	</head>
 	<body onload=init()>
-		The project is called {{ site.github.project_title }}
+		{% The project is called {{ site.github.project_title }} %}
 		<div class="form-group">
 			<label for="input">輸入題目關鍵字</label>
 			<input type="text" class="form-control" id="input">
