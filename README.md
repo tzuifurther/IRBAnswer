@@ -1,4 +1,4 @@
-# AREEAnswer
+# IRBAnswer
 
 ## 臺灣學術倫理小幫手
 
@@ -6,8 +6,7 @@
 
 使用頁面在這裡
 
-https://jimting.github.io/AREEAnswer/
-
+https://tzuifurther.github.io/IRBAnswer/
 ----------
 
 # 如何使用？
