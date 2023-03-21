@@ -3,6 +3,9 @@ lang: zh-TW
 # jekyll-github-metadata
 repository: tzuifurther/IRBAnswer
 
+liquid:
+  strict_filters: true
+
 # Plugins
 plugins:
   - "jekyll-github-metadata"
