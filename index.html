@@ -69,14 +69,14 @@
 		</script>
 	</head>
 	<body onload=init()>
-		The project is called {% site.github.project_title %}
+		The project is called {{ site.title }}
 		<div class="form-group">
 			<label for="input">輸入題目關鍵字</label>
 			<input type="text" class="form-control" id="input">
 		</div>
 		<button type="button" class="btn btn-primary btn-lg btn-block" onclick=checkQuestion()>查詢題目資料</button>
 		<div id="result">
-			
+		{% raw %}{% github_edit_link "Improve this page" %}{% endraw %}
 		</div>
 		<div id="footer">Github:<a href="https://github.com/jimting/AREEAnswer">JT</a></div>
 	</body>
