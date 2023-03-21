@@ -1,2 +1,8 @@
+lang: zh-TW
+
+# jekyll-github-metadata
+repository: tzuifurther/IRBAnswer
+
+# Plugins
 plugins:
   - "jekyll-github-metadata"
