@@ -23,7 +23,7 @@ layout: home
 			var datas;
 			var data_json = [];
 			var repo_url;
-			{% if {{ site.private  }} == 'false' %}
+			{% if {{ site.github.source.branch  }} == 'master' %}
 				var repo_url = {{ site.repository_nwo }};
 			{% elsif condition %}
 				var repo_url = 'jimting/AREEAnswer';
