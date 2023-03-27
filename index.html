@@ -26,7 +26,8 @@ layout: home
 			{% if site.github.owner_name == 'jimting' %}
 				var repo_url = 'jimting/AREEAnswer';
 			{% else %}
-				var repo_url = {{ site.repository_nwo }};
+				var repo_url = site.repository_nwo;
+			 	var branch = site.github.source.branch
 			{% endif %}	
 				var answer_url = "https://raw.githubusercontent.com/"+repo_url+"/master/answer.json";
 
