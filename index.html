@@ -23,7 +23,7 @@ layout: home
 			var datas;
 			var data_json = [];
 			var repo_url;
-			{% if {{ site.github.private }} %}
+			{% if site.github.owner_name == 'jimting' %}
 				var repo_url = 'jimting/AREEAnswer';
 			{% else %}
 				var repo_url = {{ site.repository_nwo }};
