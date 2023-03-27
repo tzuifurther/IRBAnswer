@@ -15,10 +15,8 @@ https://tzuifurther.github.io/IRBAnswer/
 
 ----------
 
-# 目前題庫有289題，有些是重複的。
 
-
-### answer.json (2020/06/02後更新為JSON格式)
+### answer.json
 
 * options欄位可以不用填滿四項，放答案即可
 * 答案記得在前面標註v，若選了答錯可以在前面打x，方便避開增加答題率。
