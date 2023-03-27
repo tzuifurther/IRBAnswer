@@ -23,10 +23,10 @@ layout: home
 			var datas;
 			var data_json = [];
 			var repo_url;
-			{% if {{ site.github.source.branch  }} == 'master' %}
-				var repo_url = {{ site.repository_nwo }};
-			{% elsif condition %}
+			{% if {{ site.github.private }} %}
 				var repo_url = 'jimting/AREEAnswer';
+			{% else %}
+				var repo_url = {{ site.repository_nwo }};
 			{% endif %}	
 				var answer_url = "https://raw.githubusercontent.com/"+repo_url+"/master/answer.json";
 
