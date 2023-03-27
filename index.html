@@ -28,7 +28,7 @@ layout: home
 			{% if site.github.owner_name == 'jimting' %}
 				repo_url = 'jimting/AREEAnswer';
 			{% else %}
-				repo_url = {{ site.repository_nwo }};
+				repo_url = {{ site.github.repository_nwo }};
 			 	branch = {{ site.github.source.branch }};
 			{% endif %}	
 				answer_url = "https://raw.githubusercontent.com/"+repo_url+"/master/answer.json";
@@ -80,6 +80,6 @@ layout: home
 		<div id="result">
 		
 		</div>
-		<div id="footer">Github:<a href="https://github.com/{{ site.github.owner_name }}/{{ site.github.site.title }}">{{ site.github.owner_name }}</a></div>
+		<div id="footer">Github:<a href="https://github.com/{{ site.github.owner_name }}">{{ site.github.owner_name }}</a></div>
 	</body>
 </html>
