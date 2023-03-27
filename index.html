@@ -23,13 +23,16 @@ layout: home
 			var datas;
 			var data_json = [];
 			var repo_url;
-			if ({{ site.github.GH_ENV }} == 'gh_pages') {
+			{% for repository in site.github.public_repositories %}
+				{% if {{ site.github.GH_ENV }} == 'gh_pages' %}
 					var repo_url = {{ site.repository_nwo }};
-				} else {
+				{% elsif condition %}
 					var repo_url = 'jimting/AREEAnswer';
-				};
+				{%endif}
+				
 				var answer_url = "https://raw.githubusercontent.com/"+repo_url+"/master/answer.json";
-				};
+				
+			{% endfor %}
 
 			function init()
 			{	
