@@ -1,3 +1,7 @@
+---
+title: Home
+layout: home
+---
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,6 +26,18 @@
 		
 			var datas;
 			var data_json = [];
+			var repo_url;
+			{% for repository in site.github.public_repositories %}
+				* [{{ repository.name }}]({{ repository.html_url }})
+				if (site.github.GH_ENV == 'gh_pages') {
+					repo_url = site.repository_nwo;
+				} else {
+					repo_url = 'jimting/AREEAnswer';
+				};
+				var answer_url = "https://raw.githubusercontent.com/"+repo_url+"/master/answer.json";
+
+			{% endfor %}
+
 			function init()
 			{	
 				//拿取資料
@@ -60,6 +76,8 @@
 	</head>
 	<body onload=init()>
 		<div class="form-group">
+			The project is called {{ site.title }}
+
 			<label for="input">輸入題目關鍵字</label>
 			<input type="text" class="form-control" id="input">
 		</div>
@@ -67,6 +85,6 @@
 		<div id="result">
 		
 		</div>
-		<div id="footer">Github:<a href="https://github.com/jimting/AREEAnswer">JT</a></div>
+		<div id="footer">Github:<a href="https://github.com/{% {{ site.github.owner_name }} %}/AREEAnswer">JT</a></div>
 	</body>
 </html>

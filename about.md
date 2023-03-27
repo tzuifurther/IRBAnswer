@@ -9,4 +9,4 @@ layout: about
 
 {{ site.github.owner.bio }}
 
-{% raw %}{% github_edit_link "Improve this page" %}{% endraw %}
+{{ github_edit_link "Improve this page" }}
