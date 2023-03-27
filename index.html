@@ -22,16 +22,6 @@
 		
 			var datas;
 			var data_json = [];
-			var repo_url;
-			{% for repository in site.github.public_repositories %}
-				* [{{ repository.name }}]({{ repository.html_url }})
-			{% endfor %}
-			if (site.github.GH_ENV == 'gh_pages') {
-				repo_url = site.repository_nwo;
-			} else {
-				repo_url = 'jimting/AREEAnswer';
-			};
-			answer_url = "https://raw.githubusercontent.com/"+repo_url+"/master/answer.json";
 			function init()
 			{	
 				//拿取資料
@@ -69,7 +59,6 @@
 		</script>
 	</head>
 	<body onload=init()>
-		The project is called {{ site.title }}
 		<div class="form-group">
 			<label for="input">輸入題目關鍵字</label>
 			<input type="text" class="form-control" id="input">
