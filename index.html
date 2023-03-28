@@ -31,7 +31,7 @@ layout: home
 				repo_url = {{ site.github.repository_nwo }};
 			 	branch = {{ site.github.source.branch }};
 			{% endif %}	
-				answer_url = "https://raw.githubusercontent.com/"+repo_url+"/master/answer.json";
+				answer_url = "https://raw.githubusercontent.com/"+`${repo_url}`+"/master/answer.json";
 
 			function init()
 			{	
