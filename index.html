@@ -22,7 +22,6 @@ layout: home
 		
 			var datas;
 			var data_json = [];
-			var answer_url;
 			var repo_url;
 			var branch;
 			{% if site.github.owner_name == 'jimting' %}
@@ -31,7 +30,7 @@ layout: home
 				repo_url = {{ site.github.repository_nwo }};
 			 	branch = {{ site.github.source.branch }};
 			{% endif %}	
-				answer_url = "https://raw.githubusercontent.com/"+`${repo_url}`+"/master/answer.json";
+				var answer_url = "https://raw.githubusercontent.com/"+`${repo_url}`+"/master/answer.json";
 
 			function init()
 			{	
